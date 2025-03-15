@@ -30,3 +30,12 @@ generator nestgraphql{
 	provider = "prisma-nestjs-graphql"
 	output = "../src/@generated/prisma-nestjs-graphql"
 }
+
+// 洗濯機
+model Machine{
+  id        Int      @default(autoincrement()) @id
+  floor     Int
+  active    Boolean
+  available Boolean
+  hasLaundry Boolean
+}

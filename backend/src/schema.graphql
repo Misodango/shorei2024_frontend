@@ -23,11 +23,21 @@ type User {
   _count: UserCount!
 }
 
+type Machine {
+  id: ID!
+  floor: Int!
+  active: Boolean!
+  available: Boolean!
+  hasLaundry: Boolean!
+}
+
 type Query {
   users: [User!]!
   user(id: Int!): User!
   posts: [Post!]!
   post(id: Int!): Post!
+  machines: [Machine!]!
+  machine(id: Int!): Machine
 }
 
 type Mutation {
@@ -37,6 +47,9 @@ type Mutation {
   createPost(createPostInput: CreatePostInput!): Post!
   updatePost(updatePostInput: UpdatePostInput!): Post!
   removePost(id: Int!): Post!
+  createMachine(createMachineInput: CreateMachineInput!): Machine!
+  updateMachine(updateMachineInput: UpdateMachineInput!): Machine!
+  removeMachine(id: Int!): Machine!
 }
 
 input CreateUserInput {
@@ -58,5 +71,20 @@ input CreatePostInput {
 input UpdatePostInput {
   """Example field (placeholder)"""
   exampleField: Int
+  id: Int!
+}
+
+input CreateMachineInput {
+  floor: Int!
+  active: Boolean
+  available: Boolean
+  hasLaundry: Boolean
+}
+
+input UpdateMachineInput {
+  floor: Int
+  active: Boolean!
+  available: Boolean!
+  hasLaundry: Boolean!
   id: Int!
 }
