@@ -11,10 +11,16 @@
   },
   "dependencies": {
     "@apollo/client": "^3.13.4",
+    "@emotion/react": "^11.14.0",
+    "@mantine/core": "^7.17.2",
+    "@mantine/hooks": "^7.17.2",
+    "@tabler/icons-react": "^3.31.0",
+    "ambient-lib": "^1.0.4",
     "graphql": "^16.10.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.3.0"
+    "react-router-dom": "^7.3.0",
+    "tabler-icons-react": "^1.56.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

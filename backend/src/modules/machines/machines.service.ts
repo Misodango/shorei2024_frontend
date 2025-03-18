@@ -31,6 +31,17 @@ export class MachinesService {
 		});
 	}
 
+	async findBySpecificFloor(floor: number) {
+		if (floor < 0) {
+			return this.findAll();
+		}
+		return this.prisma.machine.findMany({
+			where: {
+				floor: floor,
+			},
+		});
+	}
+
 	update(id: number, updateMachineInput: UpdateMachineInput) {
 		return this.prisma.machine.update({
 			where: { id: id },

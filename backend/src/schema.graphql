@@ -31,6 +31,11 @@ type Machine {
   hasLaundry: Boolean!
 }
 
+type Ambient {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
 type Query {
   users: [User!]!
   user(id: Int!): User!
@@ -38,6 +43,8 @@ type Query {
   post(id: Int!): Post!
   machines: [Machine!]!
   machine(id: Int!): Machine
+  getMachines(floor: Int!): [Machine!]
+  ambient(id: Int!): Ambient!
 }
 
 type Mutation {
@@ -50,6 +57,9 @@ type Mutation {
   createMachine(createMachineInput: CreateMachineInput!): Machine!
   updateMachine(updateMachineInput: UpdateMachineInput!): Machine!
   removeMachine(id: Int!): Machine!
+  createAmbient(createAmbientInput: CreateAmbientInput!): Ambient!
+  updateAmbient(updateAmbientInput: UpdateAmbientInput!): Ambient!
+  removeAmbient(id: Int!): Ambient!
 }
 
 input CreateUserInput {
@@ -86,5 +96,16 @@ input UpdateMachineInput {
   active: Boolean!
   available: Boolean!
   hasLaundry: Boolean!
+  id: Int!
+}
+
+input CreateAmbientInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateAmbientInput {
+  """Example field (placeholder)"""
+  exampleField: Int
   id: Int!
 }

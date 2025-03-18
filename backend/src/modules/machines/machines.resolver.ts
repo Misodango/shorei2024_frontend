@@ -23,6 +23,11 @@ export class MachinesResolver {
     return this.machinesService.findOne(id);
   }
 
+  @Query(() => [Machine], {name :'getMachines', nullable:true})
+  findBySpecificFloor(@Args('floor', {type:() => Int}) floor:number){
+    return this.machinesService.findBySpecificFloor(floor);
+  }
+
   @Mutation(() => Machine)
   async updateMachine(@Args('updateMachineInput') updateMachineInput: UpdateMachineInput) {
     return this.machinesService.update(updateMachineInput.id, updateMachineInput);
