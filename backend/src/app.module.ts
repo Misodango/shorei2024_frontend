@@ -7,6 +7,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { UsersModule } from './modules/users/users.module';
 import { PostsModule } from './modules/posts/posts.module';
 import { MachinesModule } from './modules/machines/machines.module';
+import { AmbientModule } from './modules/ambient/ambient.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { MachinesModule } from './modules/machines/machines.module';
     UsersModule,
     PostsModule,
     MachinesModule,
+    AmbientModule,
   ],
   controllers: [AppController],
   providers: [AppService],
