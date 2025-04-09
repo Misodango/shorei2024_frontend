@@ -37,4 +37,5 @@ export class MachinesResolver {
   removeMachine(@Args('id', { type: () => Int }) id: number) {
     return this.machinesService.remove(id);
   }
+
 }

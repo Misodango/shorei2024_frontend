@@ -32,7 +32,7 @@ function DashboardPage() {
 				<Group position="apart">
 					<Group>
 						<Title order={1}>洗濯機ダッシュボード</Title>
-						<Tooltip label="最終更新: 2023年8月10日 13:45">
+						<Tooltip label="最終更新: 2025年3月17日 13:45">
 							<ActionIcon color="gray" variant="subtle">
 								<IconInfoCircle size={20} />
 							</ActionIcon>
