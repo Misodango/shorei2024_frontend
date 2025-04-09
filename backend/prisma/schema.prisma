@@ -38,4 +38,9 @@ model Machine{
   active    Boolean
   available Boolean
   hasLaundry Boolean
+  startTime DateTime @default(now())
+  endTime  DateTime ?
+  avgDuration Int @default(2400) // 40min = 2400s
+  usageCount Int @default(0)
+  estimatedEndTime DateTime ?
 }

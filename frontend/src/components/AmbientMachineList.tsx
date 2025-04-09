@@ -16,7 +16,6 @@ import {
 	IconWashMachine,
 	IconShirtFilled,
 	IconCheck,
-	IconX,
 	IconActivityHeartbeat,
 } from "@tabler/icons-react";
 

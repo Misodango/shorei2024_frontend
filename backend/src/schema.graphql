@@ -29,7 +29,18 @@ type Machine {
   active: Boolean!
   available: Boolean!
   hasLaundry: Boolean!
+  startTime: DateTime!
+  endTime: DateTime
+  avgDuration: Int!
+  usageCount: Int!
+  esimatedEndTime: DateTime
+  timeRemaining: Int
 }
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
 
 type Ambient {
   """Example field (placeholder)"""
@@ -97,6 +108,11 @@ input UpdateMachineInput {
   available: Boolean!
   hasLaundry: Boolean!
   id: Int!
+  startTime: DateTime
+  endTime: DateTime
+  avgDuration: Int!
+  usageCount: Int!
+  esimatedEndTime: DateTime
 }
 
 input CreateAmbientInput {
