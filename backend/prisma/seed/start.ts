@@ -28,6 +28,16 @@ const main = async () => {
 			hasLaundry: false,
 		}
 	})
+
+	await prisma.machine.create({
+		data:{
+			floor: 2,
+			active: false,
+			available: true,
+			hasLaundry: false,
+		}
+	})
+
   console.log('💫 seed finished.');
 };
 
